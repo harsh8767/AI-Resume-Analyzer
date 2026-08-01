@@ -1,0 +1,65 @@
+/* Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+html,
+body,
+[class*="css"] {
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Hide Streamlit default menu/footer */
+#MainMenu {
+    visibility: hidden;
+}
+
+footer {
+    visibility: hidden;
+}
+
+header {
+    visibility: hidden;
+}
+
+/* Title */
+.main-title {
+    font-size: 42px;
+    font-weight: 700;
+    color: #1E3A8A;
+    text-align: center;
+    margin-bottom: 8px;
+}
+
+.sub-title {
+    text-align: center;
+    color: #6B7280;
+    font-size: 18px;
+    margin-bottom: 30px;
+}
+
+/* Section Card */
+.card {
+    padding: 20px;
+    border-radius: 12px;
+    border: 1px solid #E5E7EB;
+    background: #FFFFFF;
+    margin-bottom: 20px;
+}
+
+/* Metric Cards */
+.metric-card {
+    background: #F9FAFB;
+    border-radius: 12px;
+    padding: 20px;
+    text-align: center;
+    border: 1px solid #E5E7EB;
+}
+
+.metric-value {
+    font-size: 34px;
+    font-weight: bold;
+    color: #2563EB;
+}
+
+.metric-label {
+    color: #6B7280;
+}
