@@ -125,18 +125,17 @@ Keyword Match   Semantic Similarity   Section Analysis
 
 | Category | Technology |
 |-----------|------------|
-| Language | Python |
-| Framework | Streamlit |
-| NLP | NLTK |
-| Machine Learning | Scikit-learn |
-| Similarity | TF-IDF & Cosine Similarity |
-| Data Processing | Pandas, NumPy |
-| PDF Processing | PyMuPDF |
-| Visualization | Matplotlib |
-| AI Integration | Google Gemini API (`google-genai`) |
-| Report Generation | ReportLab |
-| Deployment | Render |
-
+| 🐍 Language | Python |
+| 🎨 Framework | Streamlit |
+| 🧠 Natural Language Processing | NLTK |
+| 🤖 Machine Learning | Scikit-learn |
+| 📊 Similarity Measurement | TF-IDF & Cosine Similarity |
+| 📈 Data Processing | Pandas, NumPy |
+| 📄 PDF Processing | PyMuPDF |
+| 📉 Visualization | Matplotlib |
+| ✨ AI Integration | Google Gemini API (`google-genai`) |
+| 📑 Report Generation | ReportLab |
+| ☁️ Deployment | Render |
 ---
 
 # 📂 Project Structure
