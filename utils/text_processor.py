@@ -1,14 +1,21 @@
 import re
+import nltk
 
 from nltk.corpus import stopwords
 from nltk.tokenize import word_tokenize
-import nltk
 
+# Ensure required NLTK resources are available
+resources = [
+    ("tokenizers/punkt", "punkt"),
+    ("tokenizers/punkt_tab", "punkt_tab"),
+    ("corpora/stopwords", "stopwords"),
+]
 
-# Download required NLTK resources (only first time)
-nltk.download("punkt")
-nltk.download("stopwords")
-
+for path, package in resources:
+    try:
+        nltk.data.find(path)
+    except LookupError:
+        nltk.download(package)
 
 STOP_WORDS = set(stopwords.words("english"))
 
