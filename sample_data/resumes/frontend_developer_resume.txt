@@ -1,0 +1,27 @@
+Sneha Patel
+
+Professional Summary
+
+Frontend Developer skilled in HTML, CSS, JavaScript, React.js, Bootstrap, and Responsive Design.
+
+Skills
+
+HTML
+CSS
+JavaScript
+React
+Bootstrap
+Git
+Responsive Design
+
+Projects
+
+Portfolio Website
+
+E-Commerce UI
+
+Weather Dashboard
+
+Education
+
+B.Tech Information Technology

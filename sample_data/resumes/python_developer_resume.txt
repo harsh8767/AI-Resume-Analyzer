@@ -1,0 +1,30 @@
+Vikram Singh
+
+Professional Summary
+
+Python Developer experienced in Flask, Django, REST APIs, PostgreSQL, Docker, and AWS.
+
+Skills
+
+Python
+Flask
+Django
+REST API
+PostgreSQL
+Docker
+AWS
+Git
+
+Experience
+
+Backend Developer
+
+Developed Flask APIs.
+
+Integrated PostgreSQL.
+
+Deployed applications using Docker.
+
+Education
+
+B.E Computer Engineering

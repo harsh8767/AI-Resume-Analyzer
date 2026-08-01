@@ -1,0 +1,21 @@
+Software Engineer
+
+Responsibilities
+
+Develop scalable backend services using Python and Django.
+
+Build REST APIs.
+
+Optimize SQL queries.
+
+Work with Git and Agile teams.
+
+Required Skills
+
+Python
+Django
+REST API
+SQL
+Git
+Problem Solving
+Communication

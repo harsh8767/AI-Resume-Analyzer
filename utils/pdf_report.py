@@ -1,0 +1,215 @@
+from datetime import datetime
+
+from reportlab.lib import colors
+from reportlab.lib.enums import TA_CENTER
+from reportlab.lib.styles import getSampleStyleSheet
+from reportlab.platypus import (
+    Paragraph,
+    SimpleDocTemplate,
+    Spacer,
+    Table,
+    TableStyle,
+)
+
+
+def create_pdf_report(
+    filename,
+    ats_score,
+    semantic_score,
+    keyword_score,
+    grade,
+    recommendation,
+    matched_keywords,
+    missing_keywords,
+    suggestions,
+    ai_review,
+):
+    """
+    Generate a professional AI Resume Analysis PDF report.
+    """
+
+    doc = SimpleDocTemplate(
+        filename,
+        rightMargin=35,
+        leftMargin=35,
+        topMargin=35,
+        bottomMargin=35,
+    )
+
+    styles = getSampleStyleSheet()
+
+    title_style = styles["Title"]
+    title_style.alignment = TA_CENTER
+
+    heading = styles["Heading2"]
+    normal = styles["BodyText"]
+
+    elements = []
+
+    # --------------------------------------------------
+    # Title
+    # --------------------------------------------------
+
+    elements.append(
+        Paragraph(
+            "AI Resume & Job Match Analysis Report",
+            title_style,
+        )
+    )
+
+    elements.append(
+        Paragraph(
+            f"Generated on: {datetime.now().strftime('%d %B %Y, %I:%M %p')}",
+            normal,
+        )
+    )
+
+    elements.append(Spacer(1, 18))
+
+    # --------------------------------------------------
+    # Score Table
+    # --------------------------------------------------
+
+    score_data = [
+        ["Metric", "Score"],
+        ["ATS Score", f"{ats_score}%"],
+        ["Semantic Match", f"{semantic_score}%"],
+        ["Keyword Match", f"{keyword_score}%"],
+        ["Resume Grade", grade],
+    ]
+
+    score_table = Table(score_data, colWidths=[220, 120])
+
+    score_table.setStyle(
+        TableStyle(
+            [
+                ("BACKGROUND", (0, 0), (-1, 0), colors.HexColor("#2563EB")),
+                ("TEXTCOLOR", (0, 0), (-1, 0), colors.white),
+                ("FONTNAME", (0, 0), (-1, 0), "Helvetica-Bold"),
+                ("BACKGROUND", (0, 1), (-1, -1), colors.whitesmoke),
+                ("GRID", (0, 0), (-1, -1), 0.5, colors.grey),
+                ("BOTTOMPADDING", (0, 0), (-1, 0), 8),
+                ("TOPPADDING", (0, 0), (-1, -1), 8),
+                ("ALIGN", (0, 0), (-1, -1), "CENTER"),
+            ]
+        )
+    )
+
+    elements.append(score_table)
+    elements.append(Spacer(1, 20))
+
+    # --------------------------------------------------
+    # Recommendation
+    # --------------------------------------------------
+
+    elements.append(
+        Paragraph("Recommendation", heading)
+    )
+
+    elements.append(
+        Paragraph(recommendation, normal)
+    )
+
+    elements.append(Spacer(1, 15))
+
+    # --------------------------------------------------
+    # Matched Skills
+    # --------------------------------------------------
+
+    elements.append(
+        Paragraph("Matched Skills", heading)
+    )
+
+    if matched_keywords:
+
+        elements.append(
+            Paragraph(", ".join(matched_keywords), normal)
+        )
+
+    else:
+
+        elements.append(
+            Paragraph("No matching skills detected.", normal)
+        )
+
+    elements.append(Spacer(1, 15))
+
+    # --------------------------------------------------
+    # Missing Skills
+    # --------------------------------------------------
+
+    elements.append(
+        Paragraph("Missing Skills", heading)
+    )
+
+    if missing_keywords:
+
+        elements.append(
+            Paragraph(", ".join(missing_keywords), normal)
+        )
+
+    else:
+
+        elements.append(
+            Paragraph("Excellent! No missing skills detected.", normal)
+        )
+
+    elements.append(Spacer(1, 15))
+
+    # --------------------------------------------------
+    # Suggestions
+    # --------------------------------------------------
+
+    elements.append(
+        Paragraph("Resume Improvement Suggestions", heading)
+    )
+
+    if suggestions:
+
+        for suggestion in suggestions:
+
+            elements.append(
+                Paragraph(f"• {suggestion}", normal)
+            )
+
+    else:
+
+        elements.append(
+            Paragraph(
+                "No improvement suggestions available.",
+                normal,
+            )
+        )
+
+    elements.append(Spacer(1, 18))
+
+    # --------------------------------------------------
+    # AI Review
+    # --------------------------------------------------
+
+    elements.append(
+        Paragraph("AI Recruiter Review", heading)
+    )
+
+    review = ai_review.replace("\n", "<br/>")
+
+    elements.append(
+        Paragraph(review, normal)
+    )
+
+    elements.append(Spacer(1, 20))
+
+    # --------------------------------------------------
+    # Footer
+    # --------------------------------------------------
+
+    elements.append(
+        Paragraph(
+            "<font size=9 color='grey'>"
+            "Generated by AI Resume & Job Match Analyzer v1.0"
+            "</font>",
+            normal,
+        )
+    )
+
+    doc.build(elements)

@@ -1,0 +1,27 @@
+Data Scientist
+
+Requirements
+
+Python
+
+Machine Learning
+
+Scikit-Learn
+
+TensorFlow
+
+NLP
+
+Pandas
+
+Data Visualization
+
+Responsibilities
+
+Develop ML models.
+
+Train predictive models.
+
+Perform feature engineering.
+
+Analyze datasets.

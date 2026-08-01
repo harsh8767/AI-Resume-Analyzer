@@ -1,0 +1,25 @@
+Frontend Developer
+
+Requirements
+
+HTML
+
+CSS
+
+JavaScript
+
+React
+
+Bootstrap
+
+Git
+
+Responsive Design
+
+Responsibilities
+
+Develop responsive interfaces.
+
+Collaborate with backend teams.
+
+Optimize website performance.

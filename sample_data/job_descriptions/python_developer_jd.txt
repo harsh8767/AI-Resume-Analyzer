@@ -1,0 +1,29 @@
+Python Developer
+
+Requirements
+
+Python
+
+Flask
+
+Django
+
+REST API
+
+Docker
+
+PostgreSQL
+
+AWS
+
+Git
+
+Responsibilities
+
+Develop backend applications.
+
+Deploy applications.
+
+Maintain APIs.
+
+Optimize database performance.

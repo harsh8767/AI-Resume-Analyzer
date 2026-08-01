@@ -1,0 +1,31 @@
+Priya Verma
+
+Professional Summary
+
+Data Analyst with strong analytical skills and experience in Python, SQL, Excel, Power BI, and Tableau.
+
+Skills
+
+Python
+SQL
+Excel
+Power BI
+Tableau
+Statistics
+Data Cleaning
+Pandas
+NumPy
+
+Experience
+
+Analyzed business reports.
+
+Built dashboards.
+
+Created Power BI reports.
+
+Performed data cleaning and visualization.
+
+Education
+
+B.Sc Statistics
