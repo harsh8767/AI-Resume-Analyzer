@@ -301,6 +301,6 @@ LinkedIn: https://www.linkedin.com/in/harsh-chavan-1646a2257/
 
 ---
 
-# 📜 License
+## 📜 License
 
-This project is licensed under the MIT License.
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
