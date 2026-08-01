@@ -1,7 +1,15 @@
+# Virtual Environment
 venv/
-__pycache__/
-*.pyc
-.env
 
+# Python cache
+__pycache__/
+*.py[cod]
+
+# Environment Variables
+.env
+.env.*
+!.env.example
+
+# Generated Reports
 reports/*.pdf
 !reports/.gitkeep
